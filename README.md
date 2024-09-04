@@ -60,8 +60,8 @@ This command installs all the necessary dependencies specified in the package.js
 ````bash
 npm run dev
 ````
-This will start the development server on http://localhost:3000 where you can view the application in your browser.
+This will start the development server on http://localhost:5173 where you can view the application in your browser.
 
 ### Notes
-- By default, the development server runs on http://localhost:3000. If this port is already in use, Vite will suggest the nearest available port.
+- By default, the development server runs on http://localhost:5173. If this port is already in use, Vite will suggest the nearest available port.
 - Be sure to check the tailwind.config.js and i18n.js files for customization settings.
