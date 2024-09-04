@@ -46,7 +46,7 @@ This will create a local copy of the project on your machine.
 
 ### 2. Go to the directory
 ````bash
-cd website
+cd react-template-website
 ````
 Ensure you're in the root of the project before continuing.
 
