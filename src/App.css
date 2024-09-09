@@ -17,3 +17,8 @@
 body {
   background-color: var(--body-bg-color);
 }
+
+main {
+  /* background-image: url(./assets/bg.jpg); */
+  font-family: "Montserrat", sans-serif;
+}
