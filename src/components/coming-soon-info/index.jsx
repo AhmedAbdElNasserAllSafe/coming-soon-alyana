@@ -1,5 +1,6 @@
 import "./style.css";
 import Counter from "../counter";
+import logo from "../../assets/logo.png"
 const ComingSoon = () => {
   const lang = localStorage.getItem('lang')
   return (
@@ -22,7 +23,7 @@ const ComingSoon = () => {
       {/* <div className="overlay bg-[#0000006b] absolute top-0 left-0 w-full h-full"></div> */}
       <main className="my-auto relative z-50 text-white text-center pt-20">
         <img
-          src="/src/assets/logo.png"
+          src={logo}
           className="w-52 !h-52 mx-auto mb-2
           "
           alt="logo"
