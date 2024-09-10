@@ -24,8 +24,7 @@ const ComingSoon = () => {
       <main className="my-auto relative z-50 text-white text-center pt-20">
         <img
           src={logo}
-          className="w-52 !h-52 mx-auto mb-2
-          "
+          className="w-52 !h-52 mx-auto mb-2"
           alt="logo"
         />
         <div className={`${lang == 'ar' && 'font-[cairo]'} container`}>
