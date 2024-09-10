@@ -8,7 +8,7 @@ const Home = lazy(() => import("./pages/home.jsx"));
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={<Loader />}>
+    <Suspense>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />

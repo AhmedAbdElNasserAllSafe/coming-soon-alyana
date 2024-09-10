@@ -5,14 +5,15 @@ export default function MainButton() {
   return <h1>hello MainButton</h1>;
 }
 
-export const LangButton = () => {
+export const LangButton = ({className}) => {
+  const lang = localStorage.getItem('lang')
   const { changeLanguage } = useLanguage();
   return (
     <button
       onClick={changeLanguage}
-      className="bg-[var(--primary-bg)] text-[var(--text-color)] p-3 rounded-md m-10"
+      className={`${className} p-2 rounded-full m-10 border hover:bg-[#a7595c] hover:border-[#a7595c] hover:text-[white]`}
     >
-      Change language
+      {`${lang == 'en' ?  `AR`: `EN`}`}
     </button>
   );
 };

@@ -1,6 +1,7 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const Counter = ({ targetDate }) => {
+  const lang = localStorage.getItem('lang')
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
@@ -28,22 +29,24 @@ const Counter = ({ targetDate }) => {
   });
 
   return (
-    <div className="grid md:grid-cols-8 gap-4 my-4 w-full">
-      <div className="col-start-3 border p-3 mx-1 text-white font-bold flex flex-col text-[25px]">
-        <span>Days</span>
-        <span>{timeLeft.days || '00'}</span>
-      </div>
-      <div className="border p-3 mx-1 text-white font-bold flex flex-col text-[25px]">
-        <span>Hours</span>
-        <span>{timeLeft.hours || '00'}</span>
-      </div>
-      <div className="border p-3 mx-1 text-white font-bold flex flex-col text-[25px]">
-        <span>Minutes</span>
-        <span>{timeLeft.minutes || '00'}</span>
-      </div>
-      <div className="border p-3 mx-1 text-white font-bold flex flex-col text-[25px]">
-        <span>Seconds</span>
-        <span>{timeLeft.seconds || '00'}</span>
+    <div className="container">
+      <div className={`${lang == 'ar' && 'font-[cairo]'} grid md:grid-cols-8 grid-cols-2 gap-4 my-4 w-full`}>
+        <div className="md:col-start-3 border rounded-md text-center py-3 text-white font-bold flex flex-col lg:text-[20px]">
+          <span>{`${lang == 'en' ?  `Days`: `الأيام`}`}</span>
+          <span>{timeLeft.days || "00"}</span>
+        </div>
+        <div className="border rounded-md text-center py-3 font-[cairo] text-white font-bold flex flex-col lg:text-[20px]">
+          <span>{`${lang == 'en' ?  `Hours`: `الساعات`}`}</span>
+          <span>{timeLeft.hours || "00"}</span>
+        </div>
+        <div className="border rounded-md text-center py-3 text-white font-bold flex flex-col lg:text-[20px]">
+          <span>{`${lang == 'en' ?  `Minuts`: `الدقائق`}`}</span>
+          <span>{timeLeft.minutes || "00"}</span>
+        </div>
+        <div className="border rounded-md text-center py-3 text-white font-bold flex flex-col lg:text-[20px]">
+          <span>{`${lang == 'en' ?  `Seconds`: `الثواني`}`}</span>
+          <span>{timeLeft.seconds || "00"}</span>
+        </div>
       </div>
     </div>
   );

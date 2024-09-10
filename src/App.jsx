@@ -13,13 +13,9 @@ function App() {
   const isAuth = auth.some((single) => single == location.pathname);
   return (
     <div className="App">
-      {isAuth ? (
-        <AuthLayout />
-      ) : (
-        <MainLayout>
-          <AppRoutes />
-        </MainLayout>
-      )}
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
     </div>
   );
 }
